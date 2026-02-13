@@ -191,7 +191,7 @@ def trans(psyir):
                 subroutine.name == 'dom_zgr' or
                 subroutine.name == 'dom_ngb'):
             continue
-        if subroutine.name == "solfrac_mod.f90":
+        if subroutine.name == "solfrac":
             # Bring these solfrac parameters to the subroutine as nvidia
             # does not permit offloaded kernels to access module parameters
             symtab = subroutine.symbol_table
